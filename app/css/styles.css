@@ -1,16 +1,16 @@
 /* Start Roots */
 :root {
   /*(intro and email sign up background)*/
-  --DarkBlue: hsl(217, 28%, 15%);
+  --DarkBlueIntro: hsl(217, 28%, 15%);
 
   /*(main background)*/
   --DarkBlue: hsl(218, 28%, 13%);
 
   /*(footer background)*/
-  --DarkBlue: hsl(216, 53%, 9%);
+  --DarkBlueFooter: hsl(216, 53%, 9%);
 
   /*(testimonials background)*/
-  --DarkBlue: hsl(219, 30%, 18%);
+  --DarkBlueTesti: hsl(219, 30%, 18%);
 
   /* (inside call-to-action gradient) */
   --Cyan: hsl(176, 68%, 64%);
@@ -69,6 +69,23 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+img {
+  max-width: 100%;
+}
+
+button {
+  display: block;
+  padding: 10px 0;
+  background-color: var(--Cyan);
+  color: var(--White);
+  font-size: 20px;
+  font-weight: 600;
+  border: 0;
+  border-radius: 24px;
+  font-family: inherit;
+  width: 100%;
+  text-align: center;
 }
 /* End Globals */
 
@@ -137,3 +154,193 @@ h6 {
   transition: 300ms;
 }
 /* End Header */
+
+/* Start Hero */
+.hero {
+  position: relative;
+  text-align: center;
+  height: calc(100vh - 62.95px);
+  background-color: var(--DarkBlueIntro);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero .curvy-intro-img {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.hero .curvy-intro-img img {
+  height: 89%;
+  width: 100vw;
+  object-fit: cover;
+}
+.hero .content {
+  margin-top: 20px;
+  z-index: 3;
+}
+.hero .content h1 {
+  color: var(--White);
+  font-size: 29px;
+}
+.hero .content p {
+  color: var(--White);
+  font-size: 17px;
+  line-height: 1.6;
+}
+/* End Hero */
+
+/* Start Features */
+.features {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  background-color: var(--DarkBlue);
+  padding: 25px 0;
+}
+.features .features-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.features .features-content .feature {
+  padding: 7px;
+  width: 100%;
+}
+.features .features-content .feature:not(:last-child) {
+  margin-bottom: 30px;
+}
+.features .features-content .feature h1 {
+  color: var(--White);
+  font-size: 25px;
+  margin: 15px 0;
+}
+.features .features-content .feature p {
+  color: var(--White);
+  line-height: 1.6;
+  font-size: 17px;
+}
+/* End Features */
+
+/* Start Productive */
+.productive {
+  position: relative;
+  z-index: 3;
+  background-color: var(--DarkBlue);
+  padding: 25px 0;
+}
+.productive .content {
+  margin-top: 15px;
+  color: var(--White);
+}
+.productive .content p {
+  line-height: 1.6;
+  font-size: 17px;
+}
+.productive .content .link {
+  border-bottom: 1px solid var(--Cyan);
+  width: 200px;
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.productive .content .link a {
+  display: inline-block;
+  margin-right: 5px;
+  color: var(--Cyan);
+  font-size: 15px;
+}
+.productive .content .link img {
+  width: 30px;
+}
+/* End Productive */
+
+/* Start Testimonials */
+.testimonials {
+  position: relative;
+  z-index: 3;
+  background-color: var(--DarkBlue);
+  padding: 25px 0;
+}
+.testimonials .testimonials-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  position: relative;
+}
+.testimonials .testimonials-content img.quotes {
+  width: 30px;
+  position: absolute;
+  left: 10px;
+  bottom: 100%;
+}
+.testimonials .testimonials-content .testimonial-box {
+  padding: 10px;
+  width: 100%;
+  background: var(--DarkBlueTesti);
+  border-radius: 10px;
+}
+.testimonials .testimonials-content .testimonial-box p {
+  color: var(--White);
+  line-height: 1.6;
+  font-size: 18px;
+  width: 100%;
+}
+.testimonials .testimonials-content .testimonial-box .user {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.testimonials .testimonials-content .testimonial-box .user .avatar img {
+  width: 90px;
+  border-radius: 50%;
+  margin-right: 18px;
+}
+.testimonials .testimonials-content .testimonial-box .details {
+  color: var(--White);
+}
+/* End Testimonials */
+
+/* Start Get Started */
+.started {
+  position: relative;
+  z-index: 3;
+  background-color: var(--DarkBlue);
+  padding: 25px 0;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.started .box {
+  padding: 30px 15px;
+  background-color: var(--DarkBlueTesti);
+  border-radius: 10px;
+  color: var(--White);
+}
+.started .box input[type="text"] {
+  display: block;
+  background-color: var(--White);
+  border-radius: 24px;
+  border: 0;
+  padding: 15px 0 15px 10px;
+  color: var(--DarkBlue);
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-family: inherit;
+}
+.started .box input[type="text"]:focus {
+  outline: none;
+}
+.started .box input[type="text"]::placeholder {
+  font-family: inherit;
+}
+/* End Get Started */
