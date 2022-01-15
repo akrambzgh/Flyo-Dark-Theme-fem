@@ -1,3 +1,139 @@
-h1 {
-  color: red;
+/* Start Roots */
+:root {
+  /*(intro and email sign up background)*/
+  --DarkBlue: hsl(217, 28%, 15%);
+
+  /*(main background)*/
+  --DarkBlue: hsl(218, 28%, 13%);
+
+  /*(footer background)*/
+  --DarkBlue: hsl(216, 53%, 9%);
+
+  /*(testimonials background)*/
+  --DarkBlue: hsl(219, 30%, 18%);
+
+  /* (inside call-to-action gradient) */
+  --Cyan: hsl(176, 68%, 64%);
+
+  /* (inside call-to-action gradient) */
+  --Blue: hsl(198, 60%, 50%);
+
+  /* (error) */
+  --LightRed: hsl(0, 100%, 63%);
+
+  --White: hsl(0, 0%, 100%);
 }
+/* End Roots */
+
+/* Start Globals */
+html {
+  font-size: 100%;
+  line-height: 1.3;
+}
+* {
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+/* End Globals */
+
+/* Start Media Qurise */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 760px;
+  }
+}
+
+@media (min-width: 922px) and (max-width: 1199px) {
+  .container {
+    width: 900px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Media Qurise */
+
+/* Start Header */
+.header {
+  position: relative;
+  padding: 15px 0;
+  background-color: var(--DarkBlue);
+  z-index: 3;
+}
+.header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav a.logo {
+  width: 100px;
+  overflow: hidden;
+}
+.header .nav a.logo img {
+  width: 100%;
+}
+.header .nav ul.main-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav ul.main-list li a.item {
+  font-size: 14px;
+  padding: 0 10px;
+  color: var(--White);
+  transition: 300ms;
+  position: relative;
+}
+.header .nav ul.main-list li a.item:hover::after {
+  width: 100%;
+}
+.header .nav ul.main-list li a.item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 3px;
+  background-color: var(--White);
+  transition: 300ms;
+}
+/* End Header */
