@@ -334,7 +334,6 @@ button {
   color: var(--DarkBlue);
   width: 100%;
   font-size: 18px;
-  margin-bottom: 15px;
   font-family: inherit;
 }
 .started .box input[type="text"]:focus {
@@ -343,4 +342,75 @@ button {
 .started .box input[type="text"]::placeholder {
   font-family: inherit;
 }
+.started .box .error {
+  display: block;
+  visibility: hidden;
+  color: var(--LightRed);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+}
+.started .box .error.there-is {
+  visibility: visible;
+}
 /* End Get Started */
+
+/* Start Footer */
+.footer {
+  position: relative;
+  z-index: 3;
+  background-color: var(--DarkBlue);
+  padding: 25px 0;
+}
+.footer .contact .section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+.footer .contact .section .icon {
+  margin-right: 15px;
+  margin-top: 7px;
+}
+.footer .contact .section .icon img {
+  width: 100%;
+}
+.footer .contact .section .text {
+  width: 100%;
+}
+.footer .contact .section .text p {
+  color: var(--White);
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+.footer .footer-list {
+  margin-top: 15px;
+  color: white;
+}
+.footer .footer-list li {
+  margin: 10px 0;
+}
+.footer .footer-list.num-2 {
+  margin-top: 20px;
+}
+.footer .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  margin: 20px auto 0;
+}
+.footer .social div {
+  margin: 0 20px;
+}
+.footer .social i {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: var(--White);
+  border-radius: 50%;
+  border: 2px solid var(--White)
+}
+/* End Footer */
