@@ -86,6 +86,8 @@ button {
   font-family: inherit;
   width: 100%;
   text-align: center;
+  cursor: pointer;
+  user-select: none;
 }
 /* End Globals */
 
@@ -175,6 +177,12 @@ button {
   height: 100%;
   z-index: -1;
 }
+@media (min-width: 922px) {
+  .hero .image {
+    width: 100%;
+    margin-top: 150px;
+  }
+}
 .hero .curvy-intro-img img {
   height: 89%;
   width: 100vw;
@@ -209,6 +217,11 @@ button {
   align-items: center;
   flex-direction: column;
 }
+@media (min-width: 922px) {
+  .features .features-content {
+    flex-direction: row;
+  }
+}
 .features .features-content .feature {
   padding: 7px;
   width: 100%;
@@ -235,9 +248,19 @@ button {
   background-color: var(--DarkBlue);
   padding: 25px 0;
 }
+.productive .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .productive .content {
   margin-top: 15px;
   color: var(--White);
+}
+@media (min-width: 922px) {
+  .productive .content {
+    margin-left: 25px;
+  }
 }
 .productive .content p {
   line-height: 1.6;
@@ -325,6 +348,26 @@ button {
   border-radius: 10px;
   color: var(--White);
 }
+@media (min-width: 922px) {
+  .started .box {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+@media (min-width: 922px) {
+  .started .box .details {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 922px) {
+  .started .box .form {
+    display: flex;
+    align-content: space-between;
+    gap: 15px;
+  }
+}
 .started .box input[type="text"] {
   display: block;
   background-color: var(--White);
@@ -335,12 +378,24 @@ button {
   width: 100%;
   font-size: 18px;
   font-family: inherit;
+  margin-bottom: 15px;
+}
+@media (min-width: 922px) {
+  .started .box input[type="text"] {
+    margin-top: 30px;
+  }
 }
 .started .box input[type="text"]:focus {
   outline: none;
 }
 .started .box input[type="text"]::placeholder {
   font-family: inherit;
+}
+@media (min-width: 922px) {
+  .started .box button {
+    width: 35%;
+    margin-top: 30px;
+  }
 }
 .started .box .error {
   display: block;
@@ -349,6 +404,7 @@ button {
   margin-top: 10px;
   margin-bottom: 10px;
   padding-left: 15px;
+  text-align: left;
 }
 .started .box .error.there-is {
   visibility: visible;
@@ -358,9 +414,17 @@ button {
 /* Start Footer */
 .footer {
   position: relative;
-  z-index: 3;
+  z-index: 1;
   background-color: var(--DarkBlue);
   padding: 25px 0;
+}
+@media (min-width: 992px) {
+  .footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+  }
 }
 .footer .contact .section {
   display: flex;
@@ -387,6 +451,11 @@ button {
 .footer .footer-list {
   margin-top: 15px;
   color: white;
+}
+@media (min-width: 992px) {
+  .footer .footer-list {
+    flex: 1;
+  }
 }
 .footer .footer-list li {
   margin: 10px 0;
